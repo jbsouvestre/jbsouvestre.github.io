@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clustered Canvas</title>
+	<style>
+		*{
+					box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+
+			padding: 0;
+			margin: 0;
+		}
+
+		html, body, #map{
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="map" ></div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/openlayers/2.13.1/OpenLayers.js"></script>
+	<script src="//rawgit.com/jbsouvestre/clustered-canvas-renderer/master/ClusteredCanvas.js"></script>
+	<script>
+		(function(){
+			'use strict';
+
+			var map, osm, countries;
+
+			map = new OpenLayers.Map({
+				div: 'map'
+			});
+
+			OpenLayers.Format.Custom = OpenLayers.Class(OpenLayers.Format.GeoJSON, {
+				read: function(data){
+					data = JSON.parse(data);
+					var toGEOJson = {
+				   		type: 'Feature',
+				   		geometry: {
+				   			type: 'MultiPolygon',
+				   			coordinates: data.coords
+				   		}
+				   	};
+				   	return OpenLayers.Format.GeoJSON.prototype.read.call(this, toGEOJson);
+				}
+			});
+
+			osm = new OpenLayers.Layer.OSM('OSM');
+			countries = new OpenLayers.Layer.Vector('Countries', {
+				renderers: ['ClusteredCanvas'],
+				strategies: [new OpenLayers.Strategy.Fixed()],
+				projection: new OpenLayers.Projection('EPSG:4326'),
+				protocol: new OpenLayers.Protocol.HTTP({
+					url: './ru.json',
+					format: new OpenLayers.Format.Custom()
+				})
+			});
+
+			map.addLayers([osm, countries]);
+			map.zoomToMaxExtent();
+		})();
+	</script>
+</body>
+</html>
