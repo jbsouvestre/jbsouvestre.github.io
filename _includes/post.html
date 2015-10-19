@@ -1,0 +1,10 @@
+<article>
+    <h2>{{ page.title }} 
+        {% if page.tagline %}
+            <small>{{ page.tagline }}</small>
+        {% endif %}
+    </h2>
+    {{ page.date|date_to_long_string }}
+    
+    {{ content }}
+</article>

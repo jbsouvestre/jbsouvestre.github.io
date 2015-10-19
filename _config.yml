@@ -1,0 +1,26 @@
+title: JB Souvestre
+tagline: tagline
+author: 
+    name: Jean-Baptiste Souvestre
+    email: jbsouvestre@gmail.com
+    github: jbsouvestre
+    twitter: jbsouvestre
+
+production_url: http://jbsouvestre.com
+rss_path: /rss.xml
+atom_path: /atom.xml
+
+analytics_id: UA-52167935-1
+
+exclude: ["README.md", "Rakefile"]
+
+markdown: kramdom
+permalink: pretty
+paginate: 3
+
+defaults:
+    -  
+        scope: 
+            path: ""
+        values:
+            layout: "default"
