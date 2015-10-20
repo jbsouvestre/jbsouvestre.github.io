@@ -4,7 +4,8 @@
     {% include meta_property.html property="og:title" content=page.title %}
     {% include meta_property.html property="twitter:title" content=page.title%}
 {% else %}
-    {% include meta_property.html property="og:type" content=site.title %}
+    {% include meta_property.html property="og:type" content="website" %}
+    {% include meta_property.html property="og:title" content=site.title %}
     {% include meta_property.html property="twitter:title" content=site.title %}
 {% endif %}
 
@@ -12,11 +13,6 @@
     {% include meta_property.html property="og:description" content=page.description %}
     {% include meta_property.html property="twitter:description" content=page.description %}
 {% endif %}
-
-<script>
-    console.log(`{{page.url}} {{site.url}} {{site.baseurl}}`);
-</script>
-
 {% include meta_property.html property="og:site_name" content=site.title %}
 {% include meta_property.html property="og:image" content=site.thumbnail %}
 {% include meta_property.html property="twitter:image" content=site.thumbnail %}
