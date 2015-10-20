@@ -1,5 +1,7 @@
-title: JB Souvestre
-tagline: tagline
+title: Jean-Baptiste Souvestre
+tagline: My blog
+thumbnail: "img/thumb.jpg"
+
 author: 
     name: Jean-Baptiste Souvestre
     email: jbsouvestre@gmail.com
@@ -8,6 +10,7 @@ author:
     linkedin: jbsouvestre
 
 production_url: http://jbsouvestre.com
+base_url: http://jbsouvestre.com/
 rss_path: /rss.xml
 atom_path: /atom.xml
 
