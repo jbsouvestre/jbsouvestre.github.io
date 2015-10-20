@@ -1,6 +1,12 @@
 ---
 ---
 
-body {
-    background-color: #efefef;
-}
+
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'responsive';
+@import 'typography';
+@import 'utils';
+
+@import 'partials/home';

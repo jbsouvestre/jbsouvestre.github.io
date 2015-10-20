@@ -5,6 +5,7 @@ author:
     email: jbsouvestre@gmail.com
     github: jbsouvestre
     twitter: jbsouvestre
+    linkedin: jbsouvestre
 
 production_url: http://jbsouvestre.com
 rss_path: /rss.xml
@@ -17,6 +18,9 @@ exclude: ["README.md", "Rakefile"]
 markdown: kramdom
 permalink: pretty
 paginate: 3
+
+gems:
+  - octopress-autoprefixer
 
 defaults:
     -  

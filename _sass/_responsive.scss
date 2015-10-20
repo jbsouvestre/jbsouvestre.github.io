@@ -1,0 +1,18 @@
+@mixin break-phone {
+    @media screen and (max-width: $breakpoint-phone) {
+        @content;
+    }
+}
+
+@mixin break-tablet {
+    @media screen and (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+
+@mixin break-desktop {
+    @media screen and (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}

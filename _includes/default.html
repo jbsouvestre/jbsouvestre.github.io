@@ -11,9 +11,11 @@
 
     <link rel="stylesheet" href="/css/main.css">
 
-    <link rel="stylesheet" href="{{ BASE_PATH }}{{site.atom_path}}" type="application/atom+xml" rel="alternate" title="ATOM Feed">
-    <link rel="stylesheet" href="{{ BASE_PATH }}{{site.rss_path}}" type="application/rss+xml" rel="alternate" title="RSS Feed">
-
+    <link href="{{ BASE_PATH }}{{site.atom_path}}" type="application/atom+xml" rel="alternate" title="ATOM Feed">
+    <link href="{{ BASE_PATH }}{{site.rss_path}}" type="application/rss+xml" rel="alternate" title="RSS Feed">
+    
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     {% include social.html%}
 </head>
 <body>
@@ -21,12 +23,7 @@
     
     {{ content }}
 
-    {% for post in site.posts %}
-        <a href="{{post.url}}">{{post.title}}</a>
-    {% endfor %}
-    
     {% include footer.html %}
-
 
     {% if jekyll.environment == "production" %}
         {% include analytics.html%}
