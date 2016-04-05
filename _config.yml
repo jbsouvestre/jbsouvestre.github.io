@@ -1,6 +1,9 @@
 title: Jean-Baptiste Souvestre
 description: "I'm a Front-end developer from Paris, working at Remotium (Avast Software). I work mainly on large Javascript applications."
-thumbnail: "http://www.jbsouvestre.com/img/thumb.jpg"
+thumbnail: "https://www.jbsouvestre.com/img/thumb.jpg"
+
+url: https://www.jbsouvestre.com
+enforce_ssl: www.jbsouvestre.com
 
 author: 
     name: Jean-Baptiste Souvestre
@@ -9,8 +12,8 @@ author:
     twitter: jbsouvestre
     linkedin: jbsouvestre
 
-production_url: http://www.jbsouvestre.com
-base_url: http://www.jbsouvestre.com/
+production_url: https://www.jbsouvestre.com
+base_url: https://www.jbsouvestre.com/
 rss_path: /rss.xml
 atom_path: /atom.xml
 
