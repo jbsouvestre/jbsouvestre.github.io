@@ -49,7 +49,14 @@ main {
         border-radius: 50%;
         box-shadow: 0 0 0 5px #fff;
         height: 200px;
-        
+
+        @include break-tablet {
+            height: 150px;
+        }
+
+        @include break-phone {
+            height: 150px;
+        }
     }
 }
 
