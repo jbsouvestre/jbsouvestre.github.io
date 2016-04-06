@@ -21,7 +21,6 @@ analytics_id: UA-52167935-1
 
 exclude: ["README.md", "Rakefile"]
 
-markdown: kramdom
 permalink: pretty
 paginate: 3
 
