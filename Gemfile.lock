@@ -94,7 +94,7 @@ GEM
     mini_portile (0.6.0)
     minitest (5.2.0)
     net-dns (0.8.0)
-    nokogiri (1.6.3.1)
+    nokogiri (1.8.1)
       mini_portile (= 0.6.0)
     octopress-autoprefixer (1.0.1)
       autoprefixer-rails (~> 2.2)
