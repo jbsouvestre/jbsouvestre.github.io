@@ -1,26 +1,59 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- description -->
+    <meta name="description" content="jbsouvestre">
+    <title>jbsouvestre</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+                color: #fff;
+            }
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @keyframes shake {
+            0% { transform: rotate(0deg) scale(1.1); }
+            25% { transform: rotate(5deg) scale(1.3); }
+            50% { transform: rotate(0) scale(1.1); }
+            75% { transform: rotate(-5deg) scale(1.3); }
+            100% { transform: rotate(0deg) scale(1.1); }
+        }
+
+        h1 {
+            /*--transition: all 0.3s ease-in-out;*/
+        }
+        h1:hover {
+            cursor: pointer;
+            animation: shake 0.5s ease-in-out infinite;
+            color: #AA4A44;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            h1:hover {
+                color: #FFA8A4;
+            }
+        }
+    </style>
+</head>
+<body>
 <main>
-    <div class="container">
-        <img src="img/thumb.jpg" alt="Thumbnail image" class="thumb">
-        <h1>Jean-Baptiste Souvestre</h1>
-        <h2>Software Engineer Consultant</h2>
-    </div>
+    <h1>jbsouvestre</h1>
 </main>
-<nav class="social-links">
-    <a href="https://twitter.com/{{ site.author.twitter }}" rel="author" class="tooltip" title="Twitter">
-        <i class="fa fa-twitter"></i>
-        <span class="sr-only">Twitter</span>
-    </a>
-
-    <a href="https://github.com/{{ site.author.github }}" rel="author" class="tooltip" title="Github">
-        <i class="fa fa-github" ></i>
-        <span class="sr-only">Github</span>
-    </a>
-
-    <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" rel="author" class="tooltip" title="LinkedIn">
-        <i class="fa fa-linkedin" ></i>
-        <span class="sr-only">LinkedIn</span>
-    </a>
-</nav>
+</body>
+</html>
